@@ -1,15 +1,20 @@
+
 import './App.css';
-import Child from './components/Dataflow/Child';
+import React from 'react';
+// import Child from './components/Dataflow/Child';
 import Parent from './components/Dataflow/Parent';
 import UpdateState from './components/useStatePractice/UpdateState';
+import { MyContextProvider } from './Context/Context';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Parent></Parent>
-      {/* <Child></Child> */}
-      <UpdateState></UpdateState>
+        <MyContextProvider>
+          <Parent></Parent>
+          {/* <Child></Child> */}
+          <UpdateState></UpdateState>
+        </MyContextProvider>
       </header>
     </div>
   );
